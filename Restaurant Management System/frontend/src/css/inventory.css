@@ -1,0 +1,49 @@
+/* ================================================
+   Inventory Page
+   ================================================ */
+
+.inventory-table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+
+.stock-bar {
+  width: 100%;
+  max-width: 120px;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.stock-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.stock-bar-fill.high { background: var(--success); }
+.stock-bar-fill.medium { background: var(--warning); }
+.stock-bar-fill.low { background: var(--danger); }
+
+.low-stock-row {
+  background: var(--danger-bg) !important;
+}
+
+.low-stock-row td {
+  color: var(--text-primary) !important;
+}
+
+.restock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-weight: 600;
+}
